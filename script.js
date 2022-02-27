@@ -65,4 +65,6 @@
             }
         });
     });
+
+    player.scrollIntoView({ block: "end", inline: "nearest" });
 }(window, document));
