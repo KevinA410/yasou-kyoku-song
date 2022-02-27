@@ -1,0 +1,110 @@
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(resources/Gotham-Font/Gotham-Bold.otf);
+}
+
+@font-face {
+    font-family: Gotham-Light;
+    src: url(resources/Gotham-Font/Gotham-Light.otf);
+}
+
+:root {
+    --width: 80vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    background-image: linear-gradient(to top, #000000, #2d0c14, #530818, #780014, #9b0000);    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+}
+
+#cover {
+    width: var(--width);
+    height: var(--width);
+    display: inline-block;
+    background-image: url('resources/cover.gif');
+    background-color: palevioletred;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: calc((100vw - var(--width)) / 2);
+    margin-top: calc((100vw - var(--width)) / 2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: end;
+    position: relative;
+}
+
+#cover > span {
+    position: absolute;
+    font-size: 1.5em;
+    color: #F5DCF1;
+    font-family: Gotham-Bold;
+    text-shadow: 2px 2px #E8B9E3;
+    opacity: 0.6;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 3px;
+    padding-right: 3px;
+}
+
+#song-information {
+    width: var(--width);
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#name {
+    font-family: Gotham-Bold;
+    font-size: 2em;
+}
+
+#artist {
+    font-family: Gotham-Light;
+    font-size: 1.5em;
+    color: #CBCBCB;
+}
+
+#lyrics {
+    color: #FFFFFF;
+    text-shadow: 2px 2px #4A4A4A;
+    width: 90vw;
+    height: calc(100vh - 720px);
+    max-height: calc(100vh - 720px);
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    overflow-y: auto;
+    font-family: Gotham-Bold;
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+#lyrics::-webkit-scrollbar { 
+    width: 0 !important 
+}
+
+#player {
+    display: block;
+    width: var(--width);
+    margin: auto;
+    margin-top: 2.5em;
+}
+
+.box {
+    transition: opacity 2000ms;
+    will-change: opacity;
+}
+
+.box.faded-out {
+    opacity: 0;
+}
